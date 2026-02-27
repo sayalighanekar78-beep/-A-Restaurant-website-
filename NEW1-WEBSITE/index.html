@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swad Maharashtracha</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">🍽 Swad Maharashtracha</div>
+  <div class="nav-controls">
+    <input type="text" id="searchBox" placeholder="Search food...">
+    <button class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+  </div>
+</nav>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button onclick="filterMenu('all')">All</button>
+  <button onclick="filterMenu('veg')">Veg</button>
+  <button onclick="filterMenu('nonveg')">Non-Veg</button>
+  <button onclick="filterMenu('drink')">Drinks</button>
+  <button onclick="filterMenu('snack')">Snacks</button>
+  <button onclick="filterMenu('fasting')">Fasting</button>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>स्वाद महाराष्ट्राचा</h1>
+  <p>Authentic Maharashtrian Veg & Non-Veg Cuisine</p>
+</section>
+
+<!-- ================= VEG ================= -->
+<h2 class="section-title">🌱 Veg Maharashtrian Menu</h2>
+<section class="menu-grid">
+
+<div class="card veg"><img src="misal pav.jpg" alt="misal pav"><h3>Misal Pav</h3><p>₹80</p><button onclick="addToCart('Misal Pav',80)">Add</button></div>
+<div class="card veg"><img src="pithala bhakri.jpg" alt="pithala bhakri"><h3>Pithla Bhakri</h3><p>₹90</p><button onclick="addToCart('Pithla Bhakri',90)">Add</button></div>
+<div class="card veg"><img src="thali peth.avif" alt="thali peth"><h3>Thalipeeth</h3><p>₹70</p><button onclick="addToCart('Thalipeeth',70)">Add</button></div>
+<div class="card veg"><img src="bharli vangi.jpg" alt="bharli vangi"><h3>Bharli Vangi</h3><p>₹120</p><button onclick="addToCart('Bharli Vangi',120)">Add</button></div>
+<div class="card veg"><img src="matki usal.jpg" alt="matki usal"><h3>Matki Usal</h3><p>₹85</p><button onclick="addToCart('Matki Usal',85)">Add</button></div>
+<div class="card veg"><img src="varan bhat.jpg" alt="varan bhat"><h3>Varan Bhaat</h3><p>₹100</p><button onclick="addToCart('Varan Bhaat',100)">Add</button></div>
+
+</section>
+<h2 class="section-title">🍯 Maharashtrian Sweets</h2>
+<section class="menu-grid">
+
+<div class="card sweet">
+<img src="puran poli.jpg" alt="puran poli">
+<h3>Puran Poli</h3>
+<p>₹60</p>
+<button onclick="addToCart('Puran Poli',60)">Add</button>
+</div>
+
+<div class="card sweet">
+<img src="modak.jpg" alt="modak">
+<h3>Modak</h3>
+<p>₹50</p>
+<button onclick="addToCart('Modak',50)">Add</button>
+</div>
+
+<div class="card sweet">
+<img src="basundi.jpg" alt="basundi">
+<h3>Basundi</h3>
+<p>₹70</p>
+<button onclick="addToCart('Basundi',70)">Add</button>
+</div>
+
+<div class="card sweet">
+<img src="shrikhanda puri.jpg" alt="shrikhanda">
+<h3>Shrikhand</h3>
+<p>₹80</p>
+<button onclick="addToCart('Shrikhand',80)">Add</button>
+</div>
+
+<div class="card sweet">
+<img src="anarsa.jpg" alt="">
+<h3>Anarsa</h3>
+<p>₹45</p>
+<button onclick="addToCart('Anarsa',45)">Add</button>
+</div>
+
+<div class="card sweet">
+<img src="gul poli.jpg" alt="">
+<h3>Gul Poli</h3>
+<p>₹55</p>
+<button onclick="addToCart('Gul Poli',55)">Add</button>
+</div>
+
+</section>
+
+
+
+<!-- ================= NON VEG ================= -->
+<h2 class="section-title">🍗 Non-Veg Maharashtrian Menu</h2>
+<section class="menu-grid">
+
+<div class="card nonveg"><img src="chiken kolhapuru.jpg" alt=""><h3>Chicken Kolhapuri</h3><p>₹220</p><button onclick="addToCart('Chicken Kolhapuri',220)">Add</button></div>
+<div class="card nonveg"><img src="mutton thali.webp" alt=""><h3>Mutton Thali</h3><p>₹280</p><button onclick="addToCart('Mutton Thali',280)">Add</button></div>
+<div class="card nonveg"><img src="tambaada rasaa.jpg" alt=""><h3>Tambda Rassa</h3><p>₹150</p><button onclick="addToCart('Tambda Rassa',150)">Add</button></div>
+<div class="card nonveg"><img src="phandra rasaa.jpg" alt=""><h3>Pandhra Rassa</h3><p>₹150</p><button onclick="addToCart('Pandhra Rassa',150)">Add</button></div>
+<div class="card nonveg"><img src="bombil fry.jpg" alt=""><h3>Bombil Fry</h3><p>₹200</p><button onclick="addToCart('Bombil Fry',200)">Add</button></div>
+<div class="card nonveg"><img src="kolambi.jpg" alt=""><h3>Kolambi Masala</h3><p>₹260</p><button onclick="addToCart('Kolambi Masala',260)">Add</button></div>
+
+</section>
+
+<!-- ================= DRINKS ================= -->
+<h2 class="section-title">🥤 Maharashtrian Drinks</h2>
+<section class="menu-grid">
+
+<div class="card drink"><img src="solkadi.jpg" alt=""><h3>Solkadhi</h3><p>₹40</p><button onclick="addToCart('Solkadhi',40)">Add</button></div>
+<div class="card drink"><img src="kokumsharbatglass.webp" alt=""><h3>Kokum Sharbat</h3><p>₹50</p><button onclick="addToCart('Kokum Sharbat',50)">Add</button></div>
+<div class="card drink"><img src="taak.webp" alt=""><h3>Taak</h3><p>₹30</p><button onclick="addToCart('Taak',30)">Add</button></div>
+<div class="card drink"><img src="sugarcane.jpg" alt=""><h3>Sugarcane Juice</h3><p>₹35</p><button onclick="addToCart('Sugarcane Juice',35)">Add</button></div>
+
+</section>
+
+<!-- ================= SNACKS ================= -->
+<h2 class="section-title">🍘 Maharashtrian Snacks</h2>
+<section class="menu-grid">
+
+<div class="card snack"><img src="kanda-bhaji-recipe12a.webp" alt=""><h3>Kanda Bhaji</h3><p>₹60</p><button onclick="addToCart('Kanda Bhaji',60)">Add</button></div>
+<div class="card snack"><img src="batta upavas bhaji.jpg" alt=""><h3>Batata Bhaji</h3><p>₹60</p><button onclick="addToCart('Batata Bhaji',60)">Add</button></div>
+<div class="card snack"><img src="poha chivda.jpg" alt=""><h3>Poha Chivda</h3><p>₹50</p><button onclick="addToCart('Poha Chivda',50)">Add</button></div>
+<div class="card snack"><img src="sabudana-vada-recipe.webp" alt=""><h3>Sabudana Vada</h3><p>₹70</p><button onclick="addToCart('Sabudana Vada',70)">Add</button></div>
+<div class="card snack"><img src="Alu-wadi-jan-25-scaled.jpg" alt=""><h3>Alu Wadi</h3><p>₹80</p><button onclick="addToCart('Alu Wadi',80)">Add</button></div>
+
+</section>
+
+<!-- ================= FASTING ================= -->
+<h2 class="section-title">🛕 Fasting (Upvas) Menu</h2>
+<section class="menu-grid">
+
+<div class="card fasting"><img src="sabudana khichadi.jpg" alt=""><h3>Sabudana Khichdi</h3><p>₹90</p><button onclick="addToCart('Sabudana Khichdi',90)">Add</button></div>
+<div class="card fasting"><img src="upavas thali pith.jpg" alt=""><h3>Upvas Thalipeeth</h3><p>₹100</p><button onclick="addToCart('Upvas Thalipeeth',100)">Add</button></div>
+<div class="card fasting"><img src="rajagira puri.jpg" alt=""><h3>Rajgira Puri</h3><p>₹90</p><button onclick="addToCart('Rajgira Puri',90)">Add</button></div>
+<div class="card fasting"><img src="batta upavas bhaji.jpg" alt=""><h3>Batata Upvas Bhaji</h3><p>₹70</p><button onclick="addToCart('Batata Upvas Bhaji',70)">Add</button></div>
+
+</section>
+
+<!-- CART -->
+<div class="cart-panel" id="cartPanel">
+<h2>Your Cart</h2>
+<div id="cartItems"></div>
+<h3>Total: ₹<span id="totalPrice">0</span></h3>
+<button onclick="placeOrder()">Order on WhatsApp</button>
+<button class="close-btn" onclick="toggleCart()">Close</button>
+</div>
+
+
+
+<footer>
+<p>© 2026 Swad Maharashtracha | Authentic Maharashtrian Restaurant</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
